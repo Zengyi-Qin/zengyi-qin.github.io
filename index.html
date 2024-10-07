@@ -39,6 +39,12 @@ hl {
   text-decoration: none;
 }
 
+hl2 {
+  color: rgb(158, 3, 3);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 a:visited {
   color: rgb(158, 3, 3);
   background-color: transparent;
@@ -82,10 +88,10 @@ li {
 
 <div class="section">
 <p><font face="Verdana">
-  I am a PhD student at MIT, affiliated with MIT CSAIL and AeroAstro. My ultimate goal is to develop <hl>general-purpose intelligence</hl> that advances how machines <hl>understand, interact, and create</hl> in both the digital and physical worlds. My experience spans <hl>training and steering foundation models (language, audio, etc), 3D computer vision, and robotics.</hl> I am fortunate to work with <hl>Dr. Brian Anthony</hl> and <hl>Bill Freeman</hl> at MIT.
+  I am a PhD student at MIT, affiliated with MIT CSAIL and AeroAstro. My experience spans <hl>training and steering foundation models (language, audio, etc), 3D computer vision, and robotics.</hl> My ultimate goal is to develop <hl>general-purpose intelligence</hl> that advances how machines <hl>understand, interact, and create</hl> in both the digital and physical worlds. I am fortunate to work with <hl>Dr. Brian Anthony</hl> and <hl>Bill Freeman</hl> at MIT.
 </font></p>
 <p><font face="Verdana">
-  Prior to 2023, I also worked on multi-agent safe control, and visual perception in 3D space.
+  I also have extensive experience <hl>converting cutting-edge research into practical products</hl>. I co-founded <a href="www.myshell.ai">MyShell.ai</a> and developed the agentic framework for everyone to build AI agents without coding. The platform now has >3M users and more than 10K apps are built.
 </font></p>
 </div>
 
@@ -128,8 +134,23 @@ li {
 </div>
 
 <div class="section">
-  <h3 id="publications"><font face="Verdana">Projects</h3>
+  <h3 id="publications"><font face="Verdana">Projects in Generative Models</h3>
   <table width="100%">
+
+  <!-- JetMoE -->
+  <tr>
+    <td width="25%" valign="middle"><p><img src="figures/jetmoe.PNG" alt="" style="border-style: none" width="250" align="top"></p></td>
+    <td width="75%" valign="top">
+    <p class="padding"><font face="Verdana">
+    <b><a id="openvoice">JetMoE: Reaching LLaMA2 Performance with 0.1M Dollars</a></b><br>
+    Yikang Shen, Zhen Guo, Tianle Cai and <b>Zengyi Qin</b><br>
+    <i>Technical Report, 2024</i><br>
+    </p>
+    <p class="padding"><font face="Verdana"> Training high-performance LLM with remarkable cost efficiency. <br>
+    <a href="https://research.myshell.ai/jetmoe">website</a> | <a href="https://github.com/myshell-ai/JetMoE">github</a> | <a href="https://arxiv.org/pdf/2404.07413.pdf">tech report</a> <br>
+    </p>
+    </td>
+  </tr>
 
   <!-- OpenVoice -->
   <tr>
@@ -146,21 +167,6 @@ li {
     <p class="padding">
     <hl>Trended 1st on Github</hl> <a class="github-button" href="https://github.com/myshell-ai/OpenVoice" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true" aria-label="Star myshell-ai/OpenVoice on GitHub">Star</a> 
     </p></td>
-  </tr>
-
-  <!-- JetMoE -->
-  <tr>
-    <td width="25%" valign="middle"><p><img src="figures/jetmoe.PNG" alt="" style="border-style: none" width="250" align="top"></p></td>
-    <td width="75%" valign="top">
-    <p class="padding"><font face="Verdana">
-    <b><a id="openvoice">JetMoE: Reaching LLaMA2 Performance with 0.1M Dollars</a></b><br>
-    Yikang Shen, Zhen Guo, Tianle Cai and <b>Zengyi Qin</b><br>
-    <i>Technical Report, 2024</i><br>
-    </p>
-    <p class="padding"><font face="Verdana"> Training high-performance LLM with remarkable cost efficiency. <br>
-    <a href="https://research.myshell.ai/jetmoe">website</a> | <a href="https://github.com/myshell-ai/JetMoE">github</a> | <a href="https://arxiv.org/pdf/2404.07413.pdf">tech report</a> <br>
-    </p>
-    </td>
   </tr>
 
   <!-- Interspeech -->
@@ -193,6 +199,85 @@ li {
     </p></td>
   </tr>
 
+</table>
+</div> 
+
+
+<div class="section">
+  <h3 id="publications"><font face="Verdana">Projects in 3D Computer Vision</h3>
+  <table width="100%">
+
+  <!-- MONOGRNET-TPAMI -->
+  <tr>
+    <td width="25%" valign="top"><p><img src="figures/monogrnet_pami.PNG" alt="" style="border-style: none" width="250" align="top"></p></td>
+    <td width="75%" valign="top">
+    <p class="padding"><font face="Verdana">
+    <b><a id="monogrnet">MonoGRNet: A General Framework for Monocular 3D Object Detection</a></b><br>
+    <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
+    <i>The IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2021</i><br>
+    </p>
+    <p class="padding"><font face="Verdana">A general monocular 3D object detection framework that flexibly adapts to both fully and weakly supervised learning, which alleviates the need of extensive 3D labels and only requires ground truth 2D bounding boxes during training.
+    </p>
+    <p class="padding"><font face="Verdana">
+    <a href="https://ieeexplore.ieee.org/document/9409679">paper</a>
+    </p></td>
+  </tr>
+
+  <!-- VS3D -->
+  <tr>
+    <td width="25%" valign="top"><p><img src="figures/vs3d.gif" alt="" style="border-style: none" width="250" align="top"></p></td>
+    <td width="75%" valign="top">
+    <p class="padding"><font face="Verdana">
+    <b>Weakly Supervised 3D Object Detection from Point Clouds</b><br>
+    <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
+    <i>ACM Multimedia (<b>ACM MM</b>), 2020</i><br>
+    </p>
+    <p class="padding"><font face="Verdana">A state-of-the-art framework for weakly supervised 3D object detection from point clouds without using any ground truth 3D bounding box for training. The core of our method is the unsupervised 3D object proposal module and the cross-modal knowledge distillation strategy.
+    </p>
+    <p class="padding"><font face="Verdana">
+    <a href="https://arxiv.org/abs/2007.13970">paper</a> | <a href="https://github.com/Zengyi-Qin/Weakly-Supervised-3D-Object-Detection">code</a>
+    </p></td>
+  </tr>
+
+  <!-- TLNET -->
+  <tr>
+    <td width="25%" valign="top"><p><img src="figures/tlnet.jpg" alt="" style="border-style: none" width="250" align="top"></p></td>
+    <td width="75%" valign="top">
+    <p class="padding"><font face="Verdana">
+    <b>Triangulation Learning Network: from Monocular to Stereo 3D Object Detection</b><br>
+    <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
+    <i>The International Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2019</i><br>
+    </p>
+    <p class="padding"><font face="Verdana">This is a pioneering work on stereo image based 3D object detection without calculating the pixel-level depth maps. We proposed a triangulation learning method to learn the object-level stereo geometric correspondence for 3D object detection.
+    </p>
+    <p class="padding"><font face="Verdana">
+    <a href="https://arxiv.org/abs/1906.01193">paper</a> | <a href="https://youtu.be/zcOXA83Uq8M">video</a> | <a href="https://github.com/Zengyi-Qin/TLNet">code</a> | <a href="https://sites.google.com/view/triangulation-learning">website</a>
+    </p></td>
+  </tr>
+    
+    <!-- MONOGRNET -->
+  <tr>
+    <td width="25%" valign="top"><p><img src="figures/monogrnet.gif" alt="" style="border-style: none" width="250" align="top"></p></td>
+    <td width="75%" valign="top">
+    <p class="padding"><font face="Verdana">
+    <b>MonoGRNet: A Geometric Reasoning Network for Monocular 3D Object Localization</b><br>
+    <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
+    <i>The Thirty-Third AAAI Conference on Artificial Intelligence (<b>AAAI</b>), 2019, <b>Oral Presentation, Acceptance Rate < 8% </b> </i><br>
+    </p>
+    <p class="padding"><font face="Verdana">A state-of-the-art monocular 3D object detection approach based on geometric reasoning. We proposed to decompose the whole task into four progressive sub-tasks that significantly facilitates the monocular 3D object detection.
+    </p>
+    <p class="padding"><font face="Verdana">
+    <a href="https://arxiv.org/abs/1811.10247">paper</a> | <a href="https://youtu.be/BJ1I56kxdk0">video</a> | <a href="https://github.com/Zengyi-Qin/MonoGRNet">code</a> | <a href="https://sites.google.com/view/monogrnet">website</a>
+    </p></td>
+  </tr>
+
+</table>
+</div> 
+
+  <div class="section">
+  <h3 id="publications"><font face="Verdana">Projects in Robotics</h3>
+  <table width="100%">
+
   <!-- Sablas -->
   <tr>
     <td width="25%" valign="top"><p><video autoplay="" class="center" loop="" muted="" playsinline="" style="display:block; margin: 0 auto;" width="250"><source src="figures/sablas.mp4" style="display: block; margin-left: auto; margin-right: auto; width:250px" type="video/mp4" /></video></p></td>
@@ -208,22 +293,7 @@ li {
     <a href="https://ieeexplore.ieee.org/document/9681233">paper</a> | <a href="https://github.com/MIT-REALM/sablas">code</a>
     </p></td>
   </tr>
-  
-  <!-- MONOGRNET-TPAMI -->
-  <tr>
-  <td width="25%" valign="top"><p><img src="figures/monogrnet_pami.PNG" alt="" style="border-style: none" width="250" align="top"></p></td>
-  <td width="75%" valign="top">
-  <p class="padding"><font face="Verdana">
-  <b><a id="monogrnet">MonoGRNet: A General Framework for Monocular 3D Object Detection</a></b><br>
-  <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
-  <i>The IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2021</i><br>
-  </p>
-  <p class="padding"><font face="Verdana">A general monocular 3D object detection framework that flexibly adapts to both fully and weakly supervised learning, which alleviates the need of extensive 3D labels and only requires ground truth 2D bounding boxes during training.
-  </p>
-  <p class="padding"><font face="Verdana">
-  <a href="https://ieeexplore.ieee.org/document/9409679">paper</a>
-  </p></td>
-  </tr>
+
 
   <!-- KETO -->
   <tr>
@@ -320,22 +390,13 @@ li {
   <a href="https://ieeexplore.ieee.org/document/9390193">paper</a>
   </p></td>
   </tr>
+
+</table>
+</div> 
   
-  <!-- VS3D -->
-  <tr>
-  <td width="25%" valign="top"><p><img src="figures/vs3d.gif" alt="" style="border-style: none" width="250" align="top"></p></td>
-  <td width="75%" valign="top">
-  <p class="padding"><font face="Verdana">
-  <b>Weakly Supervised 3D Object Detection from Point Clouds</b><br>
-  <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
-  <i>ACM Multimedia (<b>ACM MM</b>), 2020</i><br>
-  </p>
-  <p class="padding"><font face="Verdana">A state-of-the-art framework for weakly supervised 3D object detection from point clouds without using any ground truth 3D bounding box for training. The core of our method is the unsupervised 3D object proposal module and the cross-modal knowledge distillation strategy.
-  </p>
-  <p class="padding"><font face="Verdana">
-  <a href="https://arxiv.org/abs/2007.13970">paper</a> | <a href="https://github.com/Zengyi-Qin/Weakly-Supervised-3D-Object-Detection">code</a>
-  </p></td>
-  </tr>
+  <div class="section">
+    <h3 id="publications"><font face="Verdana">Projects in AI for Healthcare</h3>
+    <table width="100%">
   
   <!-- PDoctor -->
   <tr>
@@ -349,38 +410,6 @@ li {
   </p>
   <p class="padding"><font face="Verdana">
   <a href="https://www.nature.com/articles/s41598-020-79007-5">paper</a> | <a href="https://github.com/Zengyi-Qin/fine-biostate">code</a>
-  </p></td>
-  </tr>
-  
-  <!-- TLNET -->
-  <tr>
-  <td width="25%" valign="top"><p><img src="figures/tlnet.jpg" alt="" style="border-style: none" width="250" align="top"></p></td>
-  <td width="75%" valign="top">
-  <p class="padding"><font face="Verdana">
-  <b>Triangulation Learning Network: from Monocular to Stereo 3D Object Detection</b><br>
-  <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
-  <i>The International Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2019</i><br>
-  </p>
-  <p class="padding"><font face="Verdana">This is a pioneering work on stereo image based 3D object detection without calculating the pixel-level depth maps. We proposed a triangulation learning method to learn the object-level stereo geometric correspondence for 3D object detection.
-  </p>
-  <p class="padding"><font face="Verdana">
-  <a href="https://arxiv.org/abs/1906.01193">paper</a> | <a href="https://youtu.be/zcOXA83Uq8M">video</a> | <a href="https://github.com/Zengyi-Qin/TLNet">code</a> | <a href="https://sites.google.com/view/triangulation-learning">website</a>
-  </p></td>
-  </tr>
-  
-  <!-- MONOGRNET -->
-  <tr>
-  <td width="25%" valign="top"><p><img src="figures/monogrnet.gif" alt="" style="border-style: none" width="250" align="top"></p></td>
-  <td width="75%" valign="top">
-  <p class="padding"><font face="Verdana">
-  <b>MonoGRNet: A Geometric Reasoning Network for Monocular 3D Object Localization</b><br>
-  <b>Zengyi Qin</b>, Jinglu Wang and Yan Lu<br>
-  <i>The Thirty-Third AAAI Conference on Artificial Intelligence (<b>AAAI</b>), 2019, <b>Oral Presentation, Acceptance Rate < 8% </b> </i><br>
-  </p>
-  <p class="padding"><font face="Verdana">A state-of-the-art monocular 3D object detection approach based on geometric reasoning. We proposed to decompose the whole task into four progressive sub-tasks that significantly facilitates the monocular 3D object detection.
-  </p>
-  <p class="padding"><font face="Verdana">
-  <a href="https://arxiv.org/abs/1811.10247">paper</a> | <a href="https://youtu.be/BJ1I56kxdk0">video</a> | <a href="https://github.com/Zengyi-Qin/MonoGRNet">code</a> | <a href="https://sites.google.com/view/monogrnet">website</a>
   </p></td>
   </tr>
   
