@@ -104,7 +104,7 @@ li {
   I have solid experience pre-training and post-training LLMs. I was the project lead of <a href="https://research.myshell.ai/jetmoe">JetMoE-8B</a>, an MoA+MoE LLM pre-trained and post-trained <a href="https://research.myshell.ai/jetmoe">from scratch</a> (not finetuning existing models), under <a href="https://research.myshell.ai/jetmoe">extreme limitations in compute and data</a>, with <a href="https://research.myshell.ai/jetmoe">less than 0.1M USD cost</a>, but outperforms LLaMA2-7B.
 </font></p>
 <p><font face="Verdana">
-  I also co-founded an <a href="https://www.myshell.ai">AI Agent platform</a> for everyone to orchestrate hundreds of AI models to build and use agentic applications. The platform now has <a href="https://www.myshell.ai">>5M users</a> and <a href="https://www.myshell.ai">>200,000 AI agents</a> are built. The users have had <a href="https://www.myshell.ai">>500M interactions</a> with the AI agents. These make it one of the most successful agent platforms in the field.
+  I also co-founded an <a href="https://www.myshell.ai">AI Agent platform MyShell</a> for everyone to orchestrate hundreds of AI models to build and use agentic applications. The platform now has <a href="https://www.myshell.ai">>5M users</a> and <a href="https://www.myshell.ai">>200,000 AI agents</a> are built. The users have had <a href="https://www.myshell.ai">>500M interactions</a> with the AI agents. These make it one of the most successful agent platforms in the field. The company went public and has a total valuation of <a href="https://www.coingecko.com/en/coins/myshell"><span id="fdv1">FDV</span></a>.
 </font></p>
 </div>
 
@@ -124,6 +124,12 @@ li {
   <h3><font face="Verdana">News</h3>
   <p><font face="Verdana">
    <ul>
+    <li>
+      [Feb 2025] MyShell is publicly listed on major crypto exchanges with a total valuation of <a href="https://www.coingecko.com/en/coins/myshell"><span id="fdv2">FDV</span></a>. Huge congrats to the team! This is a really hard but rewarding journey because almost nobody believed AI + Decentralization make sense when we started MyShell two years ago. But now it already becomes a consensus.
+      <ul>
+        Media coverage: <a href="https://www.binance.com/en/square/post/20859989647258">Binance</a>, <a href="https://www.panewslab.com/en/articledetails/9f748vm9.html">PANews</a>, <a href="https://x.com/binance/status/1894985212679037293">Twitter</a><br>
+      </ul>
+    </li>
     <li>
       [Apr 2024] I lead the development of <a href="https://research.myshell.ai/jetmoe">JetMoE-8B</a>, an MoA+MoE LLM pre-trained and post-trained from scratch, under extreme limitations in compute and data, with less than 0.1M USD cost, but outperforms LLaMA2-7B. It democratized high-performance LLM pre-training and post-training, and received strong positive feedback from the field.
       <ul>
@@ -448,5 +454,39 @@ li {
   
   </table>
 </div> 
+
+<script>
+  // Function to fetch FDV from CoinGecko API and update the page
+  async function fetchFDV() {
+    try {
+      const response = await fetch(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=myshell'
+      );
+      if (!response.ok) {
+        throw new Error(`API request failed (status ${response.status})`);
+      }
+      const data = await response.json();
+      // Ensure data format is as expected and contains FDV
+      if (data && data[0] && data[0].fully_diluted_valuation) {
+        const fdvValue = data[0].fully_diluted_valuation;
+        // Format the FDV with commas and prefix with '$'
+        document.getElementById('fdv1').textContent = 
+          '$' + Number(fdvValue).toLocaleString();
+        document.getElementById('fdv2').textContent = 
+          '$' + Number(fdvValue).toLocaleString();
+      } else {
+        document.getElementById('fdv1').textContent = 'NA';
+        document.getElementById('fdv2').textContent = 'NA';
+      }
+    } catch (error) {
+      console.error('Error fetching FDV:', error);
+      document.getElementById('fdv').textContent = 'NA';
+    }
+  }
+
+  // Fetch FDV immediately and then update every 60 seconds
+  fetchFDV();
+  setInterval(fetchFDV, 60000);
+</script>
 
 </body></html>
