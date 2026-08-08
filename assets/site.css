@@ -248,16 +248,20 @@ li {
   }
 
   .section:not(.profile) table tr {
-    margin: 0 0 18px;
-    padding: 18px;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(83, 158, 196, 0.12);
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(48, 53, 59, 0.04);
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  .section:not(.profile) table tr:last-child {
-    margin-bottom: 0;
+  .section:not(.profile) table tr:not(:last-child)::after {
+    display: block;
+    width: 50%;
+    margin: 24px auto;
+    border-top: 1px solid rgba(83, 158, 196, 0.28);
+    content: "";
   }
 
   .section:not(.profile) table td:first-child p {
