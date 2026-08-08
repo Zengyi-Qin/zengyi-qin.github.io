@@ -72,6 +72,52 @@ li {
   font-family: Verdana, Arial, sans-serif !important;
 }
 
+.view-more {
+  margin-top: 10px;
+}
+
+.view-more summary {
+  display: inline-block;
+  margin-left: 40px;
+  color: rgb(83,158,196);
+  cursor: pointer;
+  font-family: Verdana, Arial, sans-serif !important;
+  font-weight: 400;
+  list-style: none;
+}
+
+.view-more summary * {
+  font-family: Verdana, Arial, sans-serif !important;
+}
+
+.view-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.view-more summary::after {
+  content: " +";
+}
+
+.view-more[open] summary::after {
+  content: " −";
+}
+
+.view-more .news-less-label,
+.view-more[open] .news-more-label,
+.view-more .view-less-label,
+.view-more[open] .view-more-label {
+  display: none;
+}
+
+.view-more[open] .news-less-label,
+.view-more[open] .view-less-label {
+  display: inline;
+}
+
+.news-more > .news-list {
+  margin-top: 14px;
+}
+
 /* Avoid an overly narrow reading column on smaller laptops and tablets. */
 @media (min-width: 681px) and (max-width: 900px) {
   body {
@@ -104,6 +150,14 @@ li {
     border: 1px solid rgba(83, 158, 196, 0.16);
     border-radius: 18px;
     box-shadow: 0 10px 28px rgba(48, 53, 59, 0.06);
+  }
+
+  .view-more {
+    font-size: 0.9375rem;
+  }
+
+  .news-more > summary {
+    margin-left: 24px;
   }
 
   .profile {
