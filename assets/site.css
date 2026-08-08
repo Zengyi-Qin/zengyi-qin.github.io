@@ -118,6 +118,10 @@ li {
   display: inline;
 }
 
+.publication-more[open] > summary {
+  margin-bottom: 20px;
+}
+
 .news-more > .news-list {
   margin-top: 14px;
 }
@@ -162,6 +166,10 @@ li {
 
   .news-more > summary {
     margin-left: 24px;
+  }
+
+  .publication-more > summary {
+    margin-left: 1px;
   }
 
   .profile {
@@ -259,7 +267,7 @@ li {
   .section:not(.profile) table tr:not(:last-child)::after {
     display: block;
     width: 50%;
-    margin: 24px auto;
+    margin: 8px auto 36px;
     border-top: 1px solid rgba(83, 158, 196, 0.28);
     content: "";
   }
