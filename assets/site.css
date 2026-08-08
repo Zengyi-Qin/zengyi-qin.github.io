@@ -1,0 +1,151 @@
+body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../figures/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+p { 
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+p.padding {
+  padding-left: 10px;
+}
+
+ul { 
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+a:link {
+  color:rgb(83,158,196);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+hl {
+  color:rgb(83,158,196);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+hl2 {
+  color: rgb(83,158,196);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(83,158,196);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.section {max-width:1024px}
+
+/* Avoid an overly narrow reading column on smaller laptops and tablets. */
+@media (min-width: 681px) and (max-width: 900px) {
+  body {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* Keep the established desktop layout, while making narrow screens readable. */
+@media (max-width: 680px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 24px 18px 32px;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  p, ul, li {
+    text-align: left;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+
+  .profile table,
+  .profile tbody,
+  .profile tr,
+  .profile td,
+  .section:not(.profile) > table,
+  .section:not(.profile) > table > tbody,
+  .section:not(.profile) > table > tbody > tr,
+  .section:not(.profile) > table > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .profile td:first-child p {
+    margin: 0 auto 16px;
+    text-align: center;
+  }
+
+  .profile img {
+    width: min(200px, 100%);
+  }
+
+  .profile td:nth-child(2) {
+    display: none;
+  }
+
+  .profile td:last-child p {
+    margin-top: 0;
+  }
+
+  .section:not(.profile) > table > tbody > tr {
+    margin: 0 0 30px;
+  }
+
+  .section:not(.profile) > table > tbody > tr > td:first-child p {
+    margin: 0 0 12px;
+    text-align: center;
+  }
+
+  .section:not(.profile) > table > tbody > tr > td:first-child img,
+  .section:not(.profile) > table > tbody > tr > td:first-child video {
+    display: inline-block;
+  }
+
+  .section:not(.profile) > table > tbody > tr > td:last-child p.padding {
+    padding-left: 0;
+  }
+
+  .section:not(.profile) > table img,
+  .section:not(.profile) > table video {
+    width: min(250px, 100%) !important;
+  }
+}

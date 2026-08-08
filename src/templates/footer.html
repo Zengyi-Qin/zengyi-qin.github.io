@@ -1,0 +1,35 @@
+<script>
+  // Function to fetch FDV from CoinGecko API and update the page
+  async function fetchFDV() {
+    try {
+      const response = await fetch(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=myshell'
+      );
+      if (!response.ok) {
+        throw new Error(`API request failed (status ${response.status})`);
+      }
+      const data = await response.json();
+      // Ensure data format is as expected and contains FDV
+      if (data && data[0] && data[0].fully_diluted_valuation) {
+        const fdvValue = data[0].fully_diluted_valuation;
+        // Format the FDV with commas and prefix with '$'
+        document.getElementById('fdv1').textContent = 
+          '$' + Number(fdvValue).toLocaleString();
+        document.getElementById('fdv2').textContent = 
+          '$' + Number(fdvValue).toLocaleString();
+      } else {
+        document.getElementById('fdv1').textContent = 'NA';
+        document.getElementById('fdv2').textContent = 'NA';
+      }
+    } catch (error) {
+      console.error('Error fetching FDV:', error);
+      document.getElementById('fdv').textContent = 'NA';
+    }
+  }
+
+  // Fetch FDV immediately and then update every 60 seconds
+  fetchFDV();
+  setInterval(fetchFDV, 60000);
+</script>
+
+</body></html>
