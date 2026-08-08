@@ -101,10 +101,10 @@ li {
   .profile tbody,
   .profile tr,
   .profile td,
-  .section:not(.profile) > table,
-  .section:not(.profile) > table > tbody,
-  .section:not(.profile) > table > tbody > tr,
-  .section:not(.profile) > table > tbody > tr > td {
+  .section:not(.profile) table,
+  .section:not(.profile) table tbody,
+  .section:not(.profile) table tr,
+  .section:not(.profile) table td {
     display: block;
     width: 100% !important;
   }
@@ -126,21 +126,21 @@ li {
     margin-top: 0;
   }
 
-  .section:not(.profile) > table > tbody > tr {
+  .section:not(.profile) table tr {
     margin: 0 0 30px;
   }
 
-  .section:not(.profile) > table > tbody > tr > td:first-child p {
+  .section:not(.profile) table td:first-child p {
     margin: 0 0 12px;
     text-align: center;
   }
 
-  .section:not(.profile) > table > tbody > tr > td:first-child img,
-  .section:not(.profile) > table > tbody > tr > td:first-child video {
+  .section:not(.profile) table td:first-child img,
+  .section:not(.profile) table td:first-child video {
     display: inline-block;
   }
 
-  .section:not(.profile) > table > tbody > tr > td:last-child p.padding {
+  .section:not(.profile) table td:last-child p.padding {
     padding-left: 0;
   }
 
