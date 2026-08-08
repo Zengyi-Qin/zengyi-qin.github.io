@@ -115,12 +115,12 @@ li {
   }
 
   p, ul, li {
-    text-align: justify;
+    font-size: 0.9375rem;
+    text-align: left;
   }
 
   p {
     margin: 0 0 1.05rem;
-    font-size: 1em;
     line-height: 1.4;
   }
 
